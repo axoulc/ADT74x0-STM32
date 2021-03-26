@@ -34,14 +34,14 @@ ADT74X0 temp;
 int main(void) {
 	temp.adti2c = &hi2c1; // Your I2C Handler
 	
-	ADT74x0_Init(&temp, 0x48); // Depend of A0 and A1 pins
+	ADT74x0_Init(&temp, 0x48); // I2C address depends of A0 and A1 pins
 	ADT74x0_Reset(&temp); // Optional
 	ADT74x0_SetResolution(&temp, ADT74X0_16BITS); // Put the device in 16 bits resolution
 	
 	if (ADT74x0_ReadTemp(&temp) != HAL_OK) {
 	    Error_Handler();
 	}
-	printf("Raw value : %d - Temperature Value : %f\r\n", adc.raw_data, adc.deg_data);
+	printf("Raw value : %d - Temperature Value : %f\r\n", temp.raw_data, temp.deg_data);
 }
 ```
 
