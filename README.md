@@ -19,7 +19,7 @@
 - SCL frequency : up to 400 kHz
 
 ## INT and CT pins
-These legs can be configured according to the temperature detection registers (high, low, critical and hysteresis). You will find all associated functions in the source code.
+These pins can be configured according to the temperature detection registers (high, low, critical and hysteresis). You will find all associated functions in the source code.
 
 ## Resolution
 This IC can be configured in 13bits or 16bits. The temperature value will be automatically calculated according to the resolution setting.
